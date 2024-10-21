@@ -8,6 +8,8 @@ aiosignal==1.3.1
     # via aiohttp
 alembic==1.13.3
     # via apache-airflow
+annotated-types==0.7.0
+    # via pydantic
 anyio==4.6.2.post1
     # via httpx
 apache-airflow==2.10.2
@@ -74,6 +76,8 @@ cachelib==0.9.0
     # via
     #   flask-caching
     #   flask-session
+cassandra-driver==3.29.2
+    # via data-engineering-kafka (pyproject.toml)
 certifi==2024.8.30
     # via
     #   httpcore
@@ -88,6 +92,7 @@ click==8.1.7
     #   clickclick
     #   flask
     #   flask-appbuilder
+    #   geomet
 clickclick==20.10.2
     # via connexion
 colorama==0.4.6
@@ -164,6 +169,8 @@ fsspec==2024.9.0
     # via
     #   apache-airflow
     #   universal-pathlib
+geomet==0.2.1.post1
+    # via cassandra-driver
 google-re2==1.1.20240702
     # via
     #   apache-airflow
@@ -327,8 +334,18 @@ protobuf==4.25.5
     #   opentelemetry-proto
 psutil==6.1.0
     # via apache-airflow
+py4j==0.10.9.7
+    # via pyspark
 pycparser==2.22
     # via cffi
+pydantic==2.9.2
+    # via
+    #   data-engineering-kafka (pyproject.toml)
+    #   pydantic-settings
+pydantic-core==2.23.4
+    # via pydantic
+pydantic-settings==2.6.0
+    # via data-engineering-kafka (pyproject.toml)
 pygments==2.18.0
     # via
     #   apache-airflow
@@ -338,6 +355,8 @@ pyjwt==2.9.0
     #   apache-airflow
     #   flask-appbuilder
     #   flask-jwt-extended
+pyspark==3.5.3
+    # via data-engineering-kafka (pyproject.toml)
 python-daemon==3.0.1
     # via apache-airflow
 python-dateutil==2.9.0.post0
@@ -348,6 +367,8 @@ python-dateutil==2.9.0.post0
     #   openlineage-python
     #   pendulum
     #   time-machine
+python-dotenv==1.0.1
+    # via pydantic-settings
 python-nvd3==0.16.0
     # via apache-airflow
 python-slugify==8.0.4
@@ -393,14 +414,13 @@ rpds-py==0.20.0
     # via
     #   jsonschema
     #   referencing
-ruff==0.7.0
-    # via data-engineering-kafka (pyproject.toml)
 setproctitle==1.3.3
     # via apache-airflow
 setuptools==75.2.0
     # via python-daemon
 six==1.16.0
     # via
+    #   geomet
     #   prison
     #   python-dateutil
     #   rfc3339-validator
@@ -409,6 +429,8 @@ sniffio==1.3.1
     # via
     #   anyio
     #   httpx
+spark==0.2.1
+    # via data-engineering-kafka (pyproject.toml)
 sqlalchemy==1.4.54
     # via
     #   alembic
@@ -440,6 +462,8 @@ typing-extensions==4.12.2
     #   flask-limiter
     #   limits
     #   opentelemetry-sdk
+    #   pydantic
+    #   pydantic-core
 tzdata==2024.2
     # via pendulum
 uc-micro-py==1.0.3

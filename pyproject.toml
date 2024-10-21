@@ -9,7 +9,13 @@ dependencies = [
     "apache-airflow>=2.10.2",
     "cassandra-driver>=3.29.2",
     "kafka-python-ng>=2.2.3",
+    "pydantic>=2.9.2",
+    "pydantic-settings>=2.6.0",
     "pyspark>=3.5.3",
-    "ruff>=0.7.0",
     "spark>=0.2.1",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.7.0",
 ]
